@@ -27,8 +27,10 @@ def load_pipeline():
         "lllyasviel/sd-controlnet-scribble", torch_dtype=torch.float16
     )
     pipe = StableDiffusionControlNetPipeline.from_pretrained(
-        "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float16
+    "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float32
     )
+    pipe.to("cpu")
+
     pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
     if torch.cuda.is_available():
         pipe.to("cuda")
