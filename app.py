@@ -34,7 +34,7 @@ def load_generator_model():
         # Replace with your Google Drive file ID
         file_id = "YOUR_GOOGLE_DRIVE_FILE_ID"  # ⚠️ CHANGE THIS
         
-        if file_id == "https://drive.google.com/file/d/1U-AP7epB0aY_zDw_T1aQArcAJtINw0W4/view?usp=sharing":
+        if file_id == https://drive.google.com/file/d/1U-AP7epB0aY_zDw_T1aQArcAJtINw0W4/view?usp=drive_link":
             st.error("⚠️ Please update the Google Drive file ID in app.py")
             return None
         
